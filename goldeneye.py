@@ -2,7 +2,7 @@ from math import ceil, sqrt
 
 from sklearn.model_selection import train_test_split
 
-from goodness import fidelity
+from goodness import fidelity, class_probability_ranking
 
 
 def singletonize(groups):
