@@ -187,7 +187,7 @@ def goldeneye(data, model, delta=None, classname='Class', goodness_fn=fidelity):
                          test_size=0.5, stratify=data.Label)
     model.fit(X_train, y_train)
 
-    data = X_test
+    data = X_test.reset_index(drop=True)
 
     data['PClass'] = model.predict(data)
 
