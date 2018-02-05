@@ -64,7 +64,7 @@ def grouping(data, model, delta, classname, goodness_fn):
     inflated_data = data.sample(n, replace=True)
 
     nb_goodness = goodness_fn(inflated_data, model,
-                              singletonize(attributes), [])
+                              singletonize([attributes]), [])
 
     # inflate the dataset to ensure that the desired variance level can be
     # reached
